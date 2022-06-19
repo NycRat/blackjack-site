@@ -1,22 +1,22 @@
-import React from "react";
-import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./Styles/App.css";
+import PlayPage from "./PlayPage";
+import MainPage from "./MainPage";
+import Navbar from "./Navbar";
+import LoginPage from "./LoginPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/play" element={<PlayPage />} />
+          <Route path="*" element={<h1>404 Page not found.</h1>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
