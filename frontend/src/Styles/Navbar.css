@@ -1,6 +1,7 @@
 .navbar {
   background-color: #d6c2c1;
   border-bottom: 1px solid #b8b2b1;
+  padding: 5px;
 }
 
 .nav-link {
