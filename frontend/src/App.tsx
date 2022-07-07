@@ -5,7 +5,7 @@ import MainPage from "./MainPage";
 import Navbar from "./Navbar";
 import LoginPage from "./LoginPage";
 
-function App() {
+const App = () => {
   return (
     <div className="app">
       <Navbar />
@@ -19,6 +19,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
